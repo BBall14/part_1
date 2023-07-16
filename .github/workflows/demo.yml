@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   build:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -15,7 +15,6 @@ jobs:
           java-version: "17"
           distribution: temurin
       - name: Test
-        run: mvn test
+        run: mvn  test
       - name: Package
         run: mvn clean package
-        
